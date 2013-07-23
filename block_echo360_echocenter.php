@@ -118,6 +118,7 @@ class block_echo360_echocenter extends block_base {
         global $CFG, $COURSE;
 
         // set the html to use for the block and the block footer
+        $this->content = new stdClass();
         $this->content->text = '<div class="block_echo360_echocenter"><a href="' . $CFG->wwwroot . '/blocks/echo360_echocenter/echocenter_frame.php?id=' . $COURSE->id . '"><img src="'. $CFG->wwwroot .'/blocks/echo360_echocenter/pix/echo360_logo_160x60.png" border="0" alt="Echo360"/><br/>' . get_string('echocenter_link', 'block_echo360_echocenter') . '</a></div>';
         $this->content->footer = '';
         return $this->content;
