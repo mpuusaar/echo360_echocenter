@@ -25,4 +25,4 @@
  */
 
 
-$plugin->version = 2011062101;
+$plugin->version = 2013072401;

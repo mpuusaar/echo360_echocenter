@@ -44,7 +44,7 @@ class block_echo360_echocenter extends block_base {
      * Return the version and title as properties in this class.
      */
     function init() {
-        $this->version = 2011062001;
+        $this->version = 2013072401;
         $this->title = get_string('echocenter', 'block_echo360_echocenter');
     }
 

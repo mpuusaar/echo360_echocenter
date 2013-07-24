@@ -28,7 +28,8 @@
     $string['echocenter_link'] = 'Launch EchoCenter...';
     $string['loading'] = 'Loading. Please wait...';
 
-    $string['pluginname'] = 'Echo360 EchoCenter';
+    $string['pluginname'] = 'Echo360 EchoCenter block';
+    $string['echo360_echocenter'] = 'Echo360 EchoCenter';
     $string['openinnewwindow'] = 'Open in new window...';
     $string['not_configured'] = 'This block requires system level configuration before it can be used.';
     $string['configure_link_text'] = 'Click here to set the system level configuration for this block.';
@@ -37,4 +38,6 @@
     $string['not_found_response'] = 'The EchoSystem could not find a matching course. Contact your system administrator to verify that lecture capture has been enabled for this course. <br/> {$a}';
     $string['forbidden_response'] = 'The EchoSystem is denying access to this system. Contact your system administrator to verify that this Moodle plugin has been configured correctly. <br/> {$a->classname}';
     $string['unexpected_response'] = 'The EchoSystem returned an unexpected response. Contact your system administrator to verify that this Moodle plugin has been configured correctly. <br/> {$a}';
+    $string['echo360_echocenter:addinstance'] = 'Add a new Echo360 EchoCenter block';
+    $string['echo360_echocenter:myaddinstance'] = 'Add a new Echo360 EchoCenter block to the My Moodle page';
 ?>
