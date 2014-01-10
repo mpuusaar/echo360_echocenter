@@ -41,16 +41,22 @@
     require_login($id);
 
     // load the course context for permission checks
-    $context = get_context_instance(CONTEXT_COURSE, $COURSE->id);
+    // was: $context = get_context_instance(CONTEXT_COURSE, $COURSE->id);
+    $context = context_course::instance($COURSE->id);
 
     $echocenter_str = get_string('echocenter', 'block_echo360_echocenter');
 
-    $navlinks = array();
-    $navlinks[] = array('name' => $echocenter_str, 'link' => null, 'type' => 'misc');
-    $navigation = build_navigation($navlinks);
+    // $navlinks = array();
+    // $navlinks[] = array('name' => $echocenter_str, 'link' => null, 'type' => 'misc');
+    // $navigation = build_navigation($navlinks);
+
+    // add "Echo360 EchoCenter" to the navbar
+    $PAGE->navbar->add($echocenter_str);
+    $PAGE->set_title($echocenter_str . ": " . $COURSE->shortname);
     $PAGE->requires->css('/blocks/echo360_echocenter/styles.css');
 
-    echo $OUTPUT->header("$COURSE->shortname: $echocenter_str", $COURSE->fullname, $navigation, '');
+    // echo $OUTPUT->header("$COURSE->shortname: $echocenter_str", $COURSE->fullname, $navigation, '');
+    echo $OUTPUT->header("$COURSE->shortname: $echocenter_str", $COURSE->fullname, $PAGE->navbar, '');
     echo $OUTPUT->heading(format_string($COURSE->fullname) . ": $echocenter_str", 3, 'main');
 
 
